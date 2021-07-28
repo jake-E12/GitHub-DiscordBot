@@ -42,7 +42,6 @@ function getRepos(message) {
         .on('data', function(chunk) {
             var $ = cherio.load(chunk);
             const repos = $("*[itemprop = 'name codeRepository']").text().split(' ');
-            let i = 0;
             repos.forEach(element => {
                 if (element != "") {
                     message.reply(`https://github.com/${user}/${element}`);
