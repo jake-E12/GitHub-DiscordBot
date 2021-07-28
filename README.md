@@ -10,8 +10,8 @@ This is a discord bot that reads and output code repositorys from github, it out
 To run this bot:
 
 things you will need: 
-node js 
-ide with terminal 
+node js \n
+ide with terminal \n
 npm 
 
 before doing anything open your IDE and open index.js, then run 
