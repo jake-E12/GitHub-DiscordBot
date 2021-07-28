@@ -1,5 +1,3 @@
-const credentials = require('./credentials.json');
-
 const cherio = require('cheerio');
 const requests = require('requests');
 
@@ -13,12 +11,12 @@ client.on('ready', () => {
 
 client.on('message', message => {
     let message_ = message.toString().split(' ');
-    if ((!message.author.bot) && (message.member.guild.roles.cache.some(r => r.name === "Owner" || "Bot")) && (message_.includes(`${Prefix}change`, '-p'))) {
+    if ((!message.author.bot) && (message.member.guild.roles.cache.some(r => r.name === "Your Roles Here")) && (message_.includes(`${Prefix}change`, '-p'))) {
         changePrefix(message);
         console.log("You done something right for once :)");
     }
 
-    if ((!message.author.bot) && (message.member.guild.roles.cache.some(r => r.name === "Owner" || "Bot")) && (message_.includes(`${Prefix}git`, 'get_repos'))) {
+    if ((!message.author.bot) && (message.member.guild.roles.cache.some(r => r.name === "Your Roles Here")) && (message_.includes(`${Prefix}git`, 'get_repos'))) {
         getRepos(message);
     }
 });
@@ -60,4 +58,4 @@ function getRepos(message) {
 };
 
 
-client.login(credentials.discordtoken);
+client.login("Your Discord Bot Token");
